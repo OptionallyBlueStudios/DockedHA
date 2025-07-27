@@ -2,7 +2,7 @@
   "name": "Beszel Agent",
   "version": "1.0",
   "slug": "beszel_agent",
-  "description": "Home Assistant add-on that runs the Beszel Agent for secure access.",
+  "description": "Remotely monitor your home assistant instance with Beszel! Beszel app is required aswell.",
   "startup": "services",
   "boot": "auto",
   "host_network": true,
