@@ -1,0 +1,22 @@
+{
+  "name": "Beszel Agent",
+  "version": "1.0",
+  "slug": "beszel_agent",
+  "description": "Home Assistant add-on that runs the Beszel Agent for secure access.",
+  "startup": "services",
+  "boot": "auto",
+  "host_network": true,
+  "privileged": [],
+  "full_access": false,
+  "map": [
+    "docker:ro"
+  ],
+  "options": {
+    "key": "...",
+    "listen": 45876
+  },
+  "schema": {
+    "key": "str",
+    "listen": "int"
+  }
+}
