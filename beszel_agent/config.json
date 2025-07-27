@@ -1,22 +1,24 @@
-{
-  "name": "Beszel Agent",
-  "version": "1.0",
-  "slug": "beszel_agent",
-  "description": "Remotely monitor your home assistant instance with Beszel! Beszel app is required aswell.",
-  "startup": "services",
-  "boot": "auto",
-  "host_network": true,
-  "privileged": [],
-  "full_access": false,
-  "map": [
-    "docker:ro"
-  ],
-  "options": {
-    "key": "...",
-    "listen": 45876
-  },
-  "schema": {
-    "key": "str",
-    "listen": "int"
-  }
-}
+name: Beszel Agent
+version: "1.0"
+slug: beszel_agent
+description: >
+  Remotely monitor your Home Assistant instance with Beszel!
+  The Beszel app is required as well.
+startup: services
+boot: auto
+host_network: true
+privileged: []
+map:
+  - docker:ro
+options:
+  key: "..."
+  listen: 45876
+schema:
+  key: str
+  listen: int
+arch:
+  - armv7
+  - arm64
+  - amd64
+  - i386
+image: "local/beszel_agent"
